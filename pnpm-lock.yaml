@@ -95,21 +95,36 @@ importers:
       '@nestjs/platform-express':
         specifier: ^11.0.1
         version: 11.1.14(@nestjs/common@11.1.14(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.14)
+      '@nestjs/schedule':
+        specifier: ^6.1.1
+        version: 6.1.1(@nestjs/common@11.1.14(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.14)
+      '@nestjs/swagger':
+        specifier: ^11.2.6
+        version: 11.2.6(@nestjs/common@11.1.14(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.14)(reflect-metadata@0.2.2)
       '@nestjs/terminus':
         specifier: ^11.1.1
         version: 11.1.1(@nestjs/common@11.1.14(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.14)(reflect-metadata@0.2.2)(rxjs@7.8.2)
       '@nestjs/throttler':
         specifier: ^6.5.0
         version: 6.5.0(@nestjs/common@11.1.14(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.14)(reflect-metadata@0.2.2)
+      '@stellar-pay/payments-engine':
+        specifier: workspace:*
+        version: link:../../packages/payments-engine
       '@stellar/stellar-sdk':
         specifier: ^14.6.1
         version: 14.6.1
+      cron:
+        specifier: ^4.4.0
+        version: 4.4.0
       passport:
         specifier: ^0.7.0
         version: 0.7.0
       passport-jwt:
         specifier: ^4.0.1
         version: 4.0.1
+      pg:
+        specifier: ^8.20.0
+        version: 8.20.0
       reflect-metadata:
         specifier: ^0.2.2
         version: 0.2.2
@@ -1446,7 +1461,6 @@ packages:
       }
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@img/sharp-libvips-linux-arm@1.2.4':
     resolution:
@@ -1455,7 +1469,6 @@ packages:
       }
     cpu: [arm]
     os: [linux]
-    libc: [glibc]
 
   '@img/sharp-libvips-linux-ppc64@1.2.4':
     resolution:
@@ -1464,7 +1477,6 @@ packages:
       }
     cpu: [ppc64]
     os: [linux]
-    libc: [glibc]
 
   '@img/sharp-libvips-linux-riscv64@1.2.4':
     resolution:
@@ -1473,7 +1485,6 @@ packages:
       }
     cpu: [riscv64]
     os: [linux]
-    libc: [glibc]
 
   '@img/sharp-libvips-linux-s390x@1.2.4':
     resolution:
@@ -1482,7 +1493,6 @@ packages:
       }
     cpu: [s390x]
     os: [linux]
-    libc: [glibc]
 
   '@img/sharp-libvips-linux-x64@1.2.4':
     resolution:
@@ -1491,7 +1501,6 @@ packages:
       }
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@img/sharp-libvips-linuxmusl-arm64@1.2.4':
     resolution:
@@ -1500,7 +1509,6 @@ packages:
       }
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@img/sharp-libvips-linuxmusl-x64@1.2.4':
     resolution:
@@ -1509,7 +1517,6 @@ packages:
       }
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@img/sharp-linux-arm64@0.34.5':
     resolution:
@@ -1519,7 +1526,6 @@ packages:
     engines: { node: ^18.17.0 || ^20.3.0 || >=21.0.0 }
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@img/sharp-linux-arm@0.34.5':
     resolution:
@@ -1529,7 +1535,6 @@ packages:
     engines: { node: ^18.17.0 || ^20.3.0 || >=21.0.0 }
     cpu: [arm]
     os: [linux]
-    libc: [glibc]
 
   '@img/sharp-linux-ppc64@0.34.5':
     resolution:
@@ -1539,7 +1544,6 @@ packages:
     engines: { node: ^18.17.0 || ^20.3.0 || >=21.0.0 }
     cpu: [ppc64]
     os: [linux]
-    libc: [glibc]
 
   '@img/sharp-linux-riscv64@0.34.5':
     resolution:
@@ -1549,7 +1553,6 @@ packages:
     engines: { node: ^18.17.0 || ^20.3.0 || >=21.0.0 }
     cpu: [riscv64]
     os: [linux]
-    libc: [glibc]
 
   '@img/sharp-linux-s390x@0.34.5':
     resolution:
@@ -1559,7 +1562,6 @@ packages:
     engines: { node: ^18.17.0 || ^20.3.0 || >=21.0.0 }
     cpu: [s390x]
     os: [linux]
-    libc: [glibc]
 
   '@img/sharp-linux-x64@0.34.5':
     resolution:
@@ -1569,7 +1571,6 @@ packages:
     engines: { node: ^18.17.0 || ^20.3.0 || >=21.0.0 }
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@img/sharp-linuxmusl-arm64@0.34.5':
     resolution:
@@ -1579,7 +1580,6 @@ packages:
     engines: { node: ^18.17.0 || ^20.3.0 || >=21.0.0 }
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@img/sharp-linuxmusl-x64@0.34.5':
     resolution:
@@ -1589,7 +1589,6 @@ packages:
     engines: { node: ^18.17.0 || ^20.3.0 || >=21.0.0 }
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@img/sharp-wasm32@0.34.5':
     resolution:
@@ -2027,6 +2026,12 @@ packages:
       }
     engines: { node: '>=8' }
 
+  '@microsoft/tsdoc@0.16.0':
+    resolution:
+      {
+        integrity: sha512-xgAyonlVVS+q7Vc7qLW0UrJU7rSFcETRWsqdXZtjzRU8dF+6CkozTK4V4y1LwOX7j8r/vHphjDeMeGI4tNGeGA==,
+      }
+
   '@modelcontextprotocol/sdk@1.27.1':
     resolution:
       {
@@ -2221,6 +2226,22 @@ packages:
       '@nestjs/websockets':
         optional: true
 
+  '@nestjs/mapped-types@2.1.0':
+    resolution:
+      {
+        integrity: sha512-W+n+rM69XsFdwORF11UqJahn4J3xi4g/ZEOlJNL6KoW5ygWSmBB2p0S2BZ4FQeS/NDH72e6xIcu35SfJnE8bXw==,
+      }
+    peerDependencies:
+      '@nestjs/common': ^10.0.0 || ^11.0.0
+      class-transformer: ^0.4.0 || ^0.5.0
+      class-validator: ^0.13.0 || ^0.14.0
+      reflect-metadata: ^0.1.12 || ^0.2.0
+    peerDependenciesMeta:
+      class-transformer:
+        optional: true
+      class-validator:
+        optional: true
+
   '@nestjs/passport@11.0.5':
     resolution:
       {
@@ -2239,6 +2260,15 @@ packages:
       '@nestjs/common': ^11.0.0
       '@nestjs/core': ^11.0.0
 
+  '@nestjs/schedule@6.1.1':
+    resolution:
+      {
+        integrity: sha512-kQl1RRgi02GJ0uaUGCrXHCcwISsCsJDciCKe38ykJZgnAeeoeVWs8luWtBo4AqAAXm4nS5K8RlV0smHUJ4+2FA==,
+      }
+    peerDependencies:
+      '@nestjs/common': ^10.0.0 || ^11.0.0
+      '@nestjs/core': ^10.0.0 || ^11.0.0
+
   '@nestjs/schematics@11.0.9':
     resolution:
       {
@@ -2246,6 +2276,26 @@ packages:
       }
     peerDependencies:
       typescript: '>=4.8.2'
+
+  '@nestjs/swagger@11.2.6':
+    resolution:
+      {
+        integrity: sha512-oiXOxMQqDFyv1AKAqFzSo6JPvMEs4uA36Eyz/s2aloZLxUjcLfUMELSLSNQunr61xCPTpwEOShfmO7NIufKXdA==,
+      }
+    peerDependencies:
+      '@fastify/static': ^8.0.0 || ^9.0.0
+      '@nestjs/common': ^11.0.1
+      '@nestjs/core': ^11.0.1
+      class-transformer: '*'
+      class-validator: '*'
+      reflect-metadata: ^0.1.12 || ^0.2.0
+    peerDependenciesMeta:
+      '@fastify/static':
+        optional: true
+      class-transformer:
+        optional: true
+      class-validator:
+        optional: true
 
   '@nestjs/terminus@11.1.1':
     resolution:
@@ -2362,7 +2412,6 @@ packages:
     engines: { node: '>= 10' }
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@next/swc-linux-arm64-musl@16.1.6':
     resolution:
@@ -2372,7 +2421,6 @@ packages:
     engines: { node: '>= 10' }
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@next/swc-linux-x64-gnu@16.1.6':
     resolution:
@@ -2382,7 +2430,6 @@ packages:
     engines: { node: '>= 10' }
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@next/swc-linux-x64-musl@16.1.6':
     resolution:
@@ -2392,7 +2439,6 @@ packages:
     engines: { node: '>= 10' }
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@next/swc-win32-arm64-msvc@16.1.6':
     resolution:
@@ -4234,7 +4280,6 @@ packages:
       }
     cpu: [arm]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-arm-musleabihf@4.59.0':
     resolution:
@@ -4243,7 +4288,6 @@ packages:
       }
     cpu: [arm]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-arm64-gnu@4.59.0':
     resolution:
@@ -4252,7 +4296,6 @@ packages:
       }
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-arm64-musl@4.59.0':
     resolution:
@@ -4261,7 +4304,6 @@ packages:
       }
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-loong64-gnu@4.59.0':
     resolution:
@@ -4270,7 +4312,6 @@ packages:
       }
     cpu: [loong64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-loong64-musl@4.59.0':
     resolution:
@@ -4279,7 +4320,6 @@ packages:
       }
     cpu: [loong64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-ppc64-gnu@4.59.0':
     resolution:
@@ -4288,7 +4328,6 @@ packages:
       }
     cpu: [ppc64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-ppc64-musl@4.59.0':
     resolution:
@@ -4297,7 +4336,6 @@ packages:
       }
     cpu: [ppc64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-riscv64-gnu@4.59.0':
     resolution:
@@ -4306,7 +4344,6 @@ packages:
       }
     cpu: [riscv64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-riscv64-musl@4.59.0':
     resolution:
@@ -4315,7 +4352,6 @@ packages:
       }
     cpu: [riscv64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-s390x-gnu@4.59.0':
     resolution:
@@ -4324,7 +4360,6 @@ packages:
       }
     cpu: [s390x]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-x64-gnu@4.59.0':
     resolution:
@@ -4333,7 +4368,6 @@ packages:
       }
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-x64-musl@4.59.0':
     resolution:
@@ -4342,7 +4376,6 @@ packages:
       }
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-openbsd-x64@4.59.0':
     resolution:
@@ -4396,6 +4429,12 @@ packages:
     resolution:
       {
         integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==,
+      }
+
+  '@scarf/scarf@1.4.0':
+    resolution:
+      {
+        integrity: sha512-xxeapPiUXdZAE3che6f3xogoJPeZgig6omHEy1rIY5WVsB3H2BHNnZH+gHG6x91SCWyQCzWGsuL2Hh3ClO5/qQ==,
       }
 
   '@sec-ant/readable-stream@0.4.1':
@@ -4515,7 +4554,6 @@ packages:
     engines: { node: '>= 20' }
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@tailwindcss/oxide-linux-arm64-musl@4.2.1':
     resolution:
@@ -4525,7 +4563,6 @@ packages:
     engines: { node: '>= 20' }
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@tailwindcss/oxide-linux-x64-gnu@4.2.1':
     resolution:
@@ -4535,7 +4572,6 @@ packages:
     engines: { node: '>= 20' }
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@tailwindcss/oxide-linux-x64-musl@4.2.1':
     resolution:
@@ -4545,7 +4581,6 @@ packages:
     engines: { node: '>= 20' }
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@tailwindcss/oxide-wasm32-wasi@4.2.1':
     resolution:
@@ -4814,6 +4849,12 @@ packages:
     resolution:
       {
         integrity: sha512-asx5hIG9Qmf/1oStypjanR7iKTv0gXQ1Ov/jfrX6kS/EO0OFni8orbmGCn0672NHR3kXHwpAwR+B368ZGN/2rA==,
+      }
+
+  '@types/luxon@3.7.1':
+    resolution:
+      {
+        integrity: sha512-H3iskjFIAn5SlJU7OuxUmTEpebK6TKB8rxZShDslBMZJ5u9S//KM1sbdAisiSrqwLQncVjnpi2OK2J51h+4lsg==,
       }
 
   '@types/methods@1.1.4':
@@ -5116,7 +5157,6 @@ packages:
       }
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@unrs/resolver-binding-linux-arm64-musl@1.11.1':
     resolution:
@@ -5125,7 +5165,6 @@ packages:
       }
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@unrs/resolver-binding-linux-ppc64-gnu@1.11.1':
     resolution:
@@ -5134,7 +5173,6 @@ packages:
       }
     cpu: [ppc64]
     os: [linux]
-    libc: [glibc]
 
   '@unrs/resolver-binding-linux-riscv64-gnu@1.11.1':
     resolution:
@@ -5143,7 +5181,6 @@ packages:
       }
     cpu: [riscv64]
     os: [linux]
-    libc: [glibc]
 
   '@unrs/resolver-binding-linux-riscv64-musl@1.11.1':
     resolution:
@@ -5152,7 +5189,6 @@ packages:
       }
     cpu: [riscv64]
     os: [linux]
-    libc: [musl]
 
   '@unrs/resolver-binding-linux-s390x-gnu@1.11.1':
     resolution:
@@ -5161,7 +5197,6 @@ packages:
       }
     cpu: [s390x]
     os: [linux]
-    libc: [glibc]
 
   '@unrs/resolver-binding-linux-x64-gnu@1.11.1':
     resolution:
@@ -5170,7 +5205,6 @@ packages:
       }
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@unrs/resolver-binding-linux-x64-musl@1.11.1':
     resolution:
@@ -5179,7 +5213,6 @@ packages:
       }
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@unrs/resolver-binding-wasm32-wasi@1.11.1':
     resolution:
@@ -6292,6 +6325,13 @@ packages:
       {
         integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==,
       }
+
+  cron@4.4.0:
+    resolution:
+      {
+        integrity: sha512-fkdfq+b+AHI4cKdhZlppHveI/mgz2qpiYxcm+t5E5TsxX7QrLS1VE0+7GENEk9z0EeGPcpSciGv6ez24duWhwQ==,
+      }
+    engines: { node: '>=18.x' }
 
   cross-spawn@7.0.6:
     resolution:
@@ -8717,7 +8757,6 @@ packages:
     engines: { node: '>= 12.0.0' }
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   lightningcss-linux-arm64-musl@1.31.1:
     resolution:
@@ -8727,7 +8766,6 @@ packages:
     engines: { node: '>= 12.0.0' }
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   lightningcss-linux-x64-gnu@1.31.1:
     resolution:
@@ -8737,7 +8775,6 @@ packages:
     engines: { node: '>= 12.0.0' }
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   lightningcss-linux-x64-musl@1.31.1:
     resolution:
@@ -8747,7 +8784,6 @@ packages:
     engines: { node: '>= 12.0.0' }
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   lightningcss-win32-arm64-msvc@1.31.1:
     resolution:
@@ -8957,6 +8993,13 @@ packages:
       }
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
+
+  luxon@3.7.2:
+    resolution:
+      {
+        integrity: sha512-vtEhXh/gNjI9Yg1u4jX/0YVPMvxzHuGgCm6tC5kZyb08yjGWGnqAjGJvcXbqQR2P3MyMEFnRbpcdFS6PBcLqew==,
+      }
+    engines: { node: '>=12' }
 
   magic-string@0.30.17:
     resolution:
@@ -9668,6 +9711,64 @@ packages:
         integrity: sha512-KG8UEiEVkR3wGEb4m5yZkVCzigAD+cVEJck2CzYZO37ZGJfctvVptVO192MwrtPhzONn6go8ylnOdMhKqi4nfg==,
       }
 
+  pg-cloudflare@1.3.0:
+    resolution:
+      {
+        integrity: sha512-6lswVVSztmHiRtD6I8hw4qP/nDm1EJbKMRhf3HCYaqud7frGysPv7FYJ5noZQdhQtN2xJnimfMtvQq21pdbzyQ==,
+      }
+
+  pg-connection-string@2.12.0:
+    resolution:
+      {
+        integrity: sha512-U7qg+bpswf3Cs5xLzRqbXbQl85ng0mfSV/J0nnA31MCLgvEaAo7CIhmeyrmJpOr7o+zm0rXK+hNnT5l9RHkCkQ==,
+      }
+
+  pg-int8@1.0.1:
+    resolution:
+      {
+        integrity: sha512-WCtabS6t3c8SkpDBUlb1kjOs7l66xsGdKpIPZsg4wR+B3+u9UAum2odSsF9tnvxg80h4ZxLWMy4pRjOsFIqQpw==,
+      }
+    engines: { node: '>=4.0.0' }
+
+  pg-pool@3.13.0:
+    resolution:
+      {
+        integrity: sha512-gB+R+Xud1gLFuRD/QgOIgGOBE2KCQPaPwkzBBGC9oG69pHTkhQeIuejVIk3/cnDyX39av2AxomQiyPT13WKHQA==,
+      }
+    peerDependencies:
+      pg: '>=8.0'
+
+  pg-protocol@1.13.0:
+    resolution:
+      {
+        integrity: sha512-zzdvXfS6v89r6v7OcFCHfHlyG/wvry1ALxZo4LqgUoy7W9xhBDMaqOuMiF3qEV45VqsN6rdlcehHrfDtlCPc8w==,
+      }
+
+  pg-types@2.2.0:
+    resolution:
+      {
+        integrity: sha512-qTAAlrEsl8s4OiEQY69wDvcMIdQN6wdz5ojQiOy6YRMuynxenON0O5oCpJI6lshc6scgAY8qvJ2On/p+CXY0GA==,
+      }
+    engines: { node: '>=4' }
+
+  pg@8.20.0:
+    resolution:
+      {
+        integrity: sha512-ldhMxz2r8fl/6QkXnBD3CR9/xg694oT6DZQ2s6c/RI28OjtSOpxnPrUCGOBJ46RCUxcWdx3p6kw/xnDHjKvaRA==,
+      }
+    engines: { node: '>= 16.0.0' }
+    peerDependencies:
+      pg-native: '>=3.0.1'
+    peerDependenciesMeta:
+      pg-native:
+        optional: true
+
+  pgpass@1.0.5:
+    resolution:
+      {
+        integrity: sha512-FdW9r/jQZhSeohs1Z3sI1yxFQNFvMcnmfuj4WBMUTxOrAyLMaTcE1aAMBiTlbMNaXvBCQuVi0R7hd8udDSP7ug==,
+      }
+
   picocolors@1.1.1:
     resolution:
       {
@@ -9785,6 +9886,34 @@ packages:
         integrity: sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==,
       }
     engines: { node: ^10 || ^12 || >=14 }
+
+  postgres-array@2.0.0:
+    resolution:
+      {
+        integrity: sha512-VpZrUqU5A69eQyW2c5CA1jtLecCsN2U/bD6VilrFDWq5+5UIEVO7nazS3TEcHf1zuPYO/sqGvUvW62g86RXZuA==,
+      }
+    engines: { node: '>=4' }
+
+  postgres-bytea@1.0.1:
+    resolution:
+      {
+        integrity: sha512-5+5HqXnsZPE65IJZSMkZtURARZelel2oXUEO8rH83VS/hxH5vv1uHquPg5wZs8yMAfdv971IU+kcPUczi7NVBQ==,
+      }
+    engines: { node: '>=0.10.0' }
+
+  postgres-date@1.0.7:
+    resolution:
+      {
+        integrity: sha512-suDmjLVQg78nMK2UZ454hAG+OAW+HQPZ6n++TNDUX+L0+uUlLywnoxJKDou51Zm+zTCjrCl0Nq6J9C5hP9vK/Q==,
+      }
+    engines: { node: '>=0.10.0' }
+
+  postgres-interval@1.2.0:
+    resolution:
+      {
+        integrity: sha512-9ZhXKM/rw350N1ovuWHbGxnGh/SNJ4cnxHiM0rxE4VN41wsg8P8zWn9hv/buK00RP4WvlOyr/RBDiptyxVbkZQ==,
+      }
+    engines: { node: '>=0.10.0' }
 
   powershell-utils@0.1.0:
     resolution:
@@ -10583,6 +10712,13 @@ packages:
       }
     engines: { node: '>= 12' }
 
+  split2@4.2.0:
+    resolution:
+      {
+        integrity: sha512-UcjcJOWknrNkF6PLX83qcHM6KHgVKNkV62Y8a5uYDVv9ydGQVwAHMKqHdJje1VTWpljG0WYpCDhrCdAOYH4TWg==,
+      }
+    engines: { node: '>= 10.x' }
+
   sprintf-js@1.0.3:
     resolution:
       {
@@ -10858,6 +10994,12 @@ packages:
         integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==,
       }
     engines: { node: '>= 0.4' }
+
+  swagger-ui-dist@5.31.0:
+    resolution:
+      {
+        integrity: sha512-zSUTIck02fSga6rc0RZP3b7J7wgHXwLea8ZjgLA3Vgnb8QeOl3Wou2/j5QkzSGeoz6HusP/coYuJl33aQxQZpg==,
+      }
 
   symbol-observable@4.0.0:
     resolution:
@@ -12894,6 +13036,8 @@ snapshots:
 
   '@lukeed/csprng@1.1.0': {}
 
+  '@microsoft/tsdoc@0.16.0': {}
+
   '@modelcontextprotocol/sdk@1.27.1(zod@3.25.76)':
     dependencies:
       '@hono/node-server': 1.19.9(hono@4.12.3)
@@ -13071,6 +13215,11 @@ snapshots:
     optionalDependencies:
       '@nestjs/platform-express': 11.1.14(@nestjs/common@11.1.14(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.14)
 
+  '@nestjs/mapped-types@2.1.0(@nestjs/common@11.1.14(reflect-metadata@0.2.2)(rxjs@7.8.2))(reflect-metadata@0.2.2)':
+    dependencies:
+      '@nestjs/common': 11.1.14(reflect-metadata@0.2.2)(rxjs@7.8.2)
+      reflect-metadata: 0.2.2
+
   '@nestjs/passport@11.0.5(@nestjs/common@11.1.14(reflect-metadata@0.2.2)(rxjs@7.8.2))(passport@0.7.0)':
     dependencies:
       '@nestjs/common': 11.1.14(reflect-metadata@0.2.2)(rxjs@7.8.2)
@@ -13088,6 +13237,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@nestjs/schedule@6.1.1(@nestjs/common@11.1.14(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.14)':
+    dependencies:
+      '@nestjs/common': 11.1.14(reflect-metadata@0.2.2)(rxjs@7.8.2)
+      '@nestjs/core': 11.1.14(@nestjs/common@11.1.14(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/platform-express@11.1.14)(reflect-metadata@0.2.2)(rxjs@7.8.2)
+      cron: 4.4.0
+
   '@nestjs/schematics@11.0.9(chokidar@4.0.3)(typescript@5.9.3)':
     dependencies:
       '@angular-devkit/core': 19.2.17(chokidar@4.0.3)
@@ -13098,6 +13253,18 @@ snapshots:
       typescript: 5.9.3
     transitivePeerDependencies:
       - chokidar
+
+  '@nestjs/swagger@11.2.6(@nestjs/common@11.1.14(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.14)(reflect-metadata@0.2.2)':
+    dependencies:
+      '@microsoft/tsdoc': 0.16.0
+      '@nestjs/common': 11.1.14(reflect-metadata@0.2.2)(rxjs@7.8.2)
+      '@nestjs/core': 11.1.14(@nestjs/common@11.1.14(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/platform-express@11.1.14)(reflect-metadata@0.2.2)(rxjs@7.8.2)
+      '@nestjs/mapped-types': 2.1.0(@nestjs/common@11.1.14(reflect-metadata@0.2.2)(rxjs@7.8.2))(reflect-metadata@0.2.2)
+      js-yaml: 4.1.1
+      lodash: 4.17.23
+      path-to-regexp: 8.3.0
+      reflect-metadata: 0.2.2
+      swagger-ui-dist: 5.31.0
 
   '@nestjs/terminus@11.1.1(@nestjs/common@11.1.14(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.14)(reflect-metadata@0.2.2)(rxjs@7.8.2)':
     dependencies:
@@ -14681,6 +14848,8 @@ snapshots:
 
   '@rtsao/scc@1.1.0': {}
 
+  '@scarf/scarf@1.4.0': {}
+
   '@sec-ant/readable-stream@0.4.1': {}
 
   '@sinclair/typebox@0.34.48': {}
@@ -14927,6 +15096,8 @@ snapshots:
     dependencies:
       '@types/ms': 2.1.0
       '@types/node': 22.19.13
+
+  '@types/luxon@3.7.1': {}
 
   '@types/methods@1.1.4': {}
 
@@ -15815,6 +15986,11 @@ snapshots:
       typescript: 5.9.3
 
   create-require@1.1.1: {}
+
+  cron@4.4.0:
+    dependencies:
+      '@types/luxon': 3.7.1
+      luxon: 3.7.2
 
   cross-spawn@7.0.6:
     dependencies:
@@ -17678,6 +17854,8 @@ snapshots:
     dependencies:
       react: 19.2.3
 
+  luxon@3.7.2: {}
+
   magic-string@0.30.17:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
@@ -18093,6 +18271,41 @@ snapshots:
 
   pause@0.0.1: {}
 
+  pg-cloudflare@1.3.0:
+    optional: true
+
+  pg-connection-string@2.12.0: {}
+
+  pg-int8@1.0.1: {}
+
+  pg-pool@3.13.0(pg@8.20.0):
+    dependencies:
+      pg: 8.20.0
+
+  pg-protocol@1.13.0: {}
+
+  pg-types@2.2.0:
+    dependencies:
+      pg-int8: 1.0.1
+      postgres-array: 2.0.0
+      postgres-bytea: 1.0.1
+      postgres-date: 1.0.7
+      postgres-interval: 1.2.0
+
+  pg@8.20.0:
+    dependencies:
+      pg-connection-string: 2.12.0
+      pg-pool: 3.13.0(pg@8.20.0)
+      pg-protocol: 1.13.0
+      pg-types: 2.2.0
+      pgpass: 1.0.5
+    optionalDependencies:
+      pg-cloudflare: 1.3.0
+
+  pgpass@1.0.5:
+    dependencies:
+      split2: 4.2.0
+
   picocolors@1.1.1: {}
 
   picomatch@2.3.1: {}
@@ -18145,6 +18358,16 @@ snapshots:
       nanoid: 3.3.11
       picocolors: 1.1.1
       source-map-js: 1.2.1
+
+  postgres-array@2.0.0: {}
+
+  postgres-bytea@1.0.1: {}
+
+  postgres-date@1.0.7: {}
+
+  postgres-interval@1.2.0:
+    dependencies:
+      xtend: 4.0.2
 
   powershell-utils@0.1.0: {}
 
@@ -18802,6 +19025,8 @@ snapshots:
 
   source-map@0.7.6: {}
 
+  split2@4.2.0: {}
+
   sprintf-js@1.0.3: {}
 
   stable-hash@0.0.5: {}
@@ -18988,6 +19213,10 @@ snapshots:
       has-flag: 4.0.0
 
   supports-preserve-symlinks-flag@1.0.0: {}
+
+  swagger-ui-dist@5.31.0:
+    dependencies:
+      '@scarf/scarf': 1.4.0
 
   symbol-observable@4.0.0: {}
 

@@ -14,6 +14,7 @@ import { ThrottlerRedisGuard } from './rate-limiter/guards/throttler-redis.guard
     HealthModule,
     TreasuryModule,
     AuthModule,
+    // TODO: add CheckoutSessionModule and/or WorkerModule once the module files exist.
     ThrottlerModule.forRoot({
       throttlers: [
         { name: 'short', ttl: 60000, limit: 100 },
